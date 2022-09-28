@@ -522,7 +522,7 @@ align-self merupakan property yang digunakan untuk mengatur align item pada masi
 flex-grow merupakan property yang digunakan untuk mengatur ukuran dari child tag HTML. flex-grow memiliki value berupa integer. Value 0 merupakan value default dari flex-grow. Semakin besar nilai value flex-grow maka akan semakin besar item tersebut relatif terhadap item lainnya.
 
 - flex-shrink\
-flex-shrink merupakan property yang digunakan untuk mengatur ukuran dari child tag HTML. flex-shrink memiliki value berupa integer. Value 0 merupakan value default dari flex-shrink. Semakin besar nilai value flex-shrink maka akan semakin besar item tersebut relatif terhadap item lainnya.
+flex-shrink merupakan property yang digunakan untuk mengatur ukuran dari child tag HTML. flex-shrink memiliki value berupa integer. Value 0 merupakan value default dari flex-shrink. Semakin besar nilai value flex-shrink maka akan semakin kecil item tersebut relatif terhadap item lainnya.
 
 - flex-basis\
 flex-basis merupakan property yang digunakan untuk mengatur ukuran dari child tag HTML. flex-basis berfungsi layaknya width.
@@ -607,7 +607,7 @@ Node.JS adalah runtime environment untuk javascript. Node.JS dapat digunakan unt
     ```
     node nama_file.js
     ```
-## **Variabel*
+## **Variabel**
 Variabel merupakan suatu tempat untuk kita menyimpan sebuah data. Untuk membuat variabel, dalam javascript kita dapat gunakan beberapa cara, yaitu :
 
 - var\
@@ -707,7 +707,7 @@ Mathematical Assigment adalah operator yang digunakan untuk melakukan operasi ma
     // Sama saja dengan angka = angka + 10
     console.log(angka);
     ```
-- Increment dan Decrement
+- Increment dan Decrement\
 Increment dan decrement adalah operator yang digunakan untuk menambah atau mengurangi nilai variabel sebanyak 1. Contoh :
 
     ```javascript
@@ -717,7 +717,7 @@ Increment dan decrement adalah operator yang digunakan untuk menambah atau mengu
     console.log(angka);
     ```
 
-- Aritmathic
+- Aritmathic\
 Aritmathic adalah operator yang digunakan untuk melakukan operasi matematika pada variabel. Contoh :
 
     ```javascript
@@ -726,7 +726,7 @@ Aritmathic adalah operator yang digunakan untuk melakukan operasi matematika pad
     let kali = angka1 * angka2;
     console.log(kali);
     ```
-- Comparison
+- Comparison\
 Comparison adalah operator yang digunakan untuk membandingkan dua buah nilai dan akan menghasilkan nilai boolean. Contoh :
 
     ```javascript
@@ -737,7 +737,7 @@ Comparison adalah operator yang digunakan untuk membandingkan dua buah nilai dan
     console.log(hasil);
     ```
 
-- Logical
+- Logical\
 Logical adalah operator yang digunakan untuk melakukan operasi logika () pada variabel. Contoh :
 
     ```javascript
