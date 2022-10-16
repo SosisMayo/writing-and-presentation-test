@@ -178,4 +178,4 @@ Bootstrap juga menyediakan beberapa komponen yang dapat kita gunakan untuk mempe
     <button type="button" class="btn btn-dark">Dark</button>
     <button type="button" class="btn btn-link">Link</button>
 ```
-dengan begitu maka kita akan mendapatkan button dengan warna yang berbeda-beda. Begitu juga dengan elemen yang lain. 
+dengan begitu maka kita akan mendapatkan button dengan warna yang berbeda-beda. Begitu juga dengan elemen yang lain.
