@@ -61,6 +61,86 @@ Kita juga bisa menggabungkannya dengan async await, contohnya :
 ```
 # Git dan Github Lanjutan
 
+## **Git Branch**
+Branch adalah sebuah fitur yang ada di git yang digunakan untuk membuat sebuah timeline yang berbeda dari timeline utama. Branch ini berguna untuk mengembangkan sebuah fitur tanpa harus mengganggu timeline utama. Untuk membuat branch baru kita dapat menggunakan command branch diikuti nama branchnya. contohnya :
+```bash
+    git branch fitur-1
+```
+Untuk melihat branch yang ada kita dapat menggunakan command branch tanpa parameter. contohnya :
+```bash
+    git branch
+```
+Untuk berpindah branch kita dapat menggunakan command checkout diikuti nama branch yang ingin kita pindah. contohnya :
+```bash
+    git checkout fitur-1
+```
+Untuk menggabungkan branch kita dapat menggunakan command merge diikuti nama branch yang ingin kita gabungkan. contohnya :
+```bash
+    git merge fitur-1
+```
+Untuk menghapus branch kita dapat menggunakan command branch diikuti parameter -d diikuti nama branch yang ingin kita hapus. contohnya :
+```bash
+    git branch -d fitur-1
+```
+## **Git Remote**
+Remote adalah sebuah fitur yang ada di git yang digunakan untuk menghubungkan git kita dengan git lainnya. Untuk menambahkan remote kita dapat menggunakan command remote diikuti parameter add diikuti nama remote dan url remote. contohnya :
+```bash
+    git remote add origin https://github.com/SosisMayo/writing-and-presentation-test.git
+```
+Untuk melihat remote yang ada kita dapat menggunakan command remote tanpa parameter. contohnya :
+```bash
+    git remote
+```
+Untuk menghapus remote kita dapat menggunakan command remote diikuti parameter remove diikuti nama remote. contohnya :
+```bash
+    git remote remove origin
+```
+Untuk mengubah remote kita dapat menggunakan command remote diikuti parameter set-url diikuti nama remote dan url remote. contohnya :
+```bash
+    git remote set-url origin https://github.com/SosisMayo/writing-and-presentation-test.git
+```
+## **Git Pull**
+Pull adalah sebuah fitur yang ada di git yang digunakan untuk mengambil perubahan dari remote ke local. Untuk melakukan pull kita dapat menggunakan command pull diikuti nama remote dan nama branch. contohnya :
+```bash
+    git pull origin master
+```
+## **Git Push**
+Push adalah sebuah fitur yang ada di git yang digunakan untuk mengirim perubahan dari local ke remote. Untuk melakukan push kita dapat menggunakan command push diikuti nama remote dan nama branch. contohnya :
+```bash
+    git push origin master
+```
+## **Git Clone**
+Clone adalah sebuah fitur yang ada di git yang digunakan untuk mengambil sebuah repository dari remote ke local. Untuk melakukan clone kita dapat menggunakan command clone diikuti url repository. contohnya :
+```bash
+    git clone https://github.com/SosisMayo/writing-and-presentation-test.git
+```
+## **Git Stash**
+Stash adalah sebuah fitur yang ada di git yang digunakan untuk menyimpan perubahan yang belum di commit. Untuk melakukan stash kita dapat menggunakan command stash. contohnya :
+```bash
+    git stash
+```
+Untuk melihat stash kita dapat menggunakan command stash diikuti parameter list. contohnya :
+```bash
+    git stash list
+```
+Untuk menghapus stash kita dapat menggunakan command stash diikuti parameter drop diikuti nama stash. contohnya :
+```bash
+    git stash drop stash@{0}
+```
+Untuk mengembalikan stash kita dapat menggunakan command stash diikuti parameter apply diikuti nama stash. contohnya :
+```bash
+    git stash apply stash@{0}
+```
+## **Git Reset**
+Reset adalah sebuah fitur yang ada di git yang digunakan untuk mengembalikan perubahan yang sudah di commit. Untuk melakukan reset kita dapat menggunakan command reset diikuti parameter hard diikuti nama commit. contohnya :
+```bash
+    git reset --hard 1a2b3c4d5e6f7g8h9i0j
+```
+Untuk melihat commit kita dapat menggunakan command log. contohnya :
+```bash
+    git log
+```
+
 # Responsive Web Design
 Responsive Web Design adalah sebuah teknik yang digunakan untuk membuat sebuah website yang dapat menyesuaikan dengan ukuran layar yang digunakan. Kita dapat melihat apakah website kita responsive atau tidak dengan menggunakan developer tools pada browser. contohnya :
 
@@ -104,7 +184,7 @@ Kita juga dapat mengatur resposivitas dari suatu elemen dengan menggunakan prope
     }
 ```
 
-## Breakpoints
+## **Breakpoints**
 Breakpoints adalah ukuran layar yang digunakan untuk menentukan resposivitas dari suatu elemen. contohnya :
 ```css
     @media screen and (max-width: 600px) {
@@ -126,7 +206,7 @@ Breakpoints adalah ukuran layar yang digunakan untuk menentukan resposivitas dar
 dari CSS tersebut kita dapat melihat bahwa elemen dengan class container akan memiliki max-width 300px jika ukuran layar kurang dari 600px, max-width 600px jika ukuran layar lebih dari 600px dan kurang dari 900px, dan max-width 900px jika ukuran layar lebih dari 900px. Artinya kita memiliki 3 breakpoints, yaitu dibawah 600px, antara 600px dan 900px, dan diatas 900px.
 
 # **Bootstrap**
-Bootstrap adalah sebuah framework CSS yang digunakan untuk mempermudah kita dalam membuat website yang responsive. Untuk menggunakan bootstrap, pertama-tama kita harus menambahkan link bootstrap pada tag head. contohnya :
+Bootstrap adalah sebuah framework CSS yang digunakan untuk mempermudah kita dalam membuat website yang responsive. Bootstrap dapat kita gunakan ketika kita menginginkan untuk membuat tampilan website dengan cepat tanpa harus terlalu banyak mengatur styling pada CSS. Hal tersebut karena Bootstrap telah menyediakan berbagai macam styling yang dapat kita gunakan hanya dengan menambahkannya pada kelas dari element yang kita miliki. Untuk menggunakan bootstrap, pertama-tama kita harus menambahkan link bootstrap pada tag head. contohnya :
 ```html
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 ```
@@ -135,8 +215,8 @@ Kita juga dapat menggunakan bootstrap dengan menggunakan menambahkannya secara l
     <link rel="stylesheet" href="css/bootstrap.min.css">
 ```
 
-## Grid System
-Grid system adalah sebuah sistem yang digunakan untuk mengatur posisi elemen pada website. Grid system ini terdiri dari 12 kolom, dan kita dapat mengatur posisi elemen dengan menggunakan class-class yang sudah disediakan oleh bootstrap. contohnya :
+## **Layouting**
+Pada dasarnya, layouting dalam Bootstrap dapat diaplikasikan dengan menggunakan grid system. Grid system adalah sebuah sistem yang digunakan untuk mengatur posisi elemen pada website. Grid system pada Bootstrap dibuat dari CSS Flexbox.  Grid system ini terdiri dari 12 kolom, dan kita dapat mengatur posisi elemen dengan menggunakan class-class yang sudah disediakan oleh bootstrap. contohnya :
 ```html
     <div class="container">
         <div class="row">
@@ -165,7 +245,24 @@ Grid system adalah sebuah sistem yang digunakan untuk mengatur posisi elemen pad
 ```
 dari kode tersebut kita dapat melihat bahwa elemen dengan class card akan memiliki sebesar 12 kolom jika ukuran layar kurang dari 576px, 6 kolom jika ukuran layar lebih dari 576px dan kurang dari 768px, dan 4 kolom jika ukuran layar lebih dari 768px. Artinya kita memiliki 3 breakpoints, yaitu dibawah 576px, antara 576px dan 768px, dan diatas 768px.
 
-## Components
+## **Contents**
+Bootstrap juga terdiri dari berbagai macam file. Beberapa file diantaranya adalah :
+- CSS
+  - Bootstrap CSS\
+  Di dalamnya terdapat Layout, Content, Component, dan Utilities
+  - Bootstrap Grid CSS\
+  Di dalamnya hanya terdapat layout berupa grid system dan utilities berupa flex
+  - Bootstrap Utilities CSS\
+  Di dalamnya terdapat utilities saja
+  - Bootstrap Reboot CSS\
+  Di dalamnya hanya terdapat reboot, yaitu styling yang digunakan untuk mengatur ulang styling yang sudah ada pada browser, contohnya font, list, form, table, dan lain-lain.
+- JS
+  - Bootstrap Bundle JS
+  Di dalamnya sudah terdapat popper.js
+  - Bootstrap JS
+  Di dalamnya belum terdapat popper.js
+
+## **Components**
 Bootstrap juga menyediakan beberapa komponen yang dapat kita gunakan untuk mempermudah kita dalam membuat website. Untuk menggunakannya kita cukup menambahkan class pada element html yang kita miliki. contohnya :
 ```html
     <button type="button" class="btn btn-primary">Primary</button>
@@ -179,3 +276,11 @@ Bootstrap juga menyediakan beberapa komponen yang dapat kita gunakan untuk mempe
     <button type="button" class="btn btn-link">Link</button>
 ```
 dengan begitu maka kita akan mendapatkan button dengan warna yang berbeda-beda. Begitu juga dengan elemen yang lain.
+## **Responsive**
+Bootstrap juga mendukung responsive web design dengan menyediakan memerapa breakpoint, diantaranya :
+- Extra Small : untuk ukuran layar dibawah 576px
+- Small (sm) : untuk ukuran layar antara 576px dan 767px
+- Medium (md) : untuk ukuran layar antara 768px dan 991px
+- Large (lg) : untuk ukuran layar antara 992px dan 1199px
+- Extra Large (xl) : untuk ukuran layar antara 1200px dan 1399px
+- dan Extra Extra Large (xxl) : untuk ukuran layar diatas 1400px keatas
